@@ -1,10 +1,10 @@
 import React from "react";
-import CalculadoraIdade from "./components/CalculadoraIdade";
+import CalculadoraIdade from "./CalculadoraIdade";
 
 function App() {
     return (
         <div>
-            <CalculadoraIdade />
+            <CalculadoraIdade/>
         </div>
     );
 }

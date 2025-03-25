@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/style.css";
+import "./style.css";
 
 const CalculadoraIdade = () => {
     const [dataNascimento, setDataNascimento] = useState("");
