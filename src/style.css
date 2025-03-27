@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Alexer+Pro+Black+Italic&display=swap');
 
+:root {
+    --bg-title: linear-gradient(to right, rgb(226, 74, 206), #6a0dad);;
+  }
+
 body {
     font-family: 'Alexer Pro Black Italic', sans-serif;
     display: flex;
@@ -8,6 +12,14 @@ body {
     height: 100vh;
     background: url('https://static.vecteezy.com/system/resources/previews/004/256/686/non_2x/abstract-dark-pink-gradient-geometric-background-modern-background-design-wave-liquid-shapes-composition-creative-templates-fit-for-presentation-design-website-basis-for-banners-wallpapers-free-vector.jpg') no-repeat center center/cover;
     margin: 0;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .container {
@@ -22,18 +34,23 @@ body {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     margin-bottom: 1rem;
     text-align: center;
     font-weight: bold;
     font-family: 'Alexer Pro Black Italic', sans-serif;
+    background-image: var(--bg-title);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
-.input-container {
+.input-group {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-bottom: 1rem;
+    margin-top: 2rem;
 }
 
 input {
@@ -70,6 +87,13 @@ button::before {
     color: white;
 }
 
+span {
+    background-image: var(--bg-title);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
 .result {
     font-size: 3rem;
     font-weight: bold;
@@ -91,12 +115,13 @@ button::before {
 
 .title {
     font-family: 'Alexer Pro Black Italic', sans-serif;
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: bold;
     text-align: center;
     margin-bottom: 1rem;
 }
 
+/* Media query para telas menores (smartphones) */
 @media (max-width: 600px) {
     .container {
         max-width: 90%;
@@ -104,7 +129,7 @@ button::before {
         border-radius: 25px;
     }
 
-    .input-container {
+    .input-group {
         flex-direction: row;
         gap: 8px;
     }
@@ -136,5 +161,123 @@ button::before {
         font-size: 3.5rem;
         font-weight: 900;
         padding-right: 4px;
+    }
+}
+
+/* Media query para orientação paisagem (landscape) */
+@media (max-height: 500px) { /* Ajuste o valor de max-height conforme necessário */
+    body {
+        align-items: flex-start; /* Alinha o conteúdo no topo */
+        padding-top: 20px; /* Adiciona algum espaço no topo */
+    }
+
+    .container {
+        max-width: 600px; /* Aumenta a largura máxima */
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: row; /* Coloca os elementos em linha */
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    .input-group {
+        flex-direction: column; /* Coloca os inputs em coluna */
+        align-items: flex-start;
+        gap: 5px;
+        width: 30%;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .result {
+        text-align: left;
+        padding-left: 0;
+        width: 30%;
+        font-size: 2rem;
+    }
+
+    button {
+        margin: 0;
+        width: 50px;
+        height: 50px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+        text-align: left;
+        width: 30%;
+    }
+}
+
+/* Media query para telas com largura de 300px */
+@media (max-width: 300px) {
+    .container {
+        padding: 1rem;
+        border-radius: 15px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    input {
+        width: 100%;
+        padding: 6px;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+
+    button::before {
+        font-size: 1.2rem;
+    }
+
+    .result {
+        font-size: 2rem;
+    }
+
+    .result span {
+        font-size: 3rem;
+    }
+}
+
+/* Media query para telas com largura de 400px */
+@media (min-width: 301px) and (max-width: 400px) {
+    .container {
+        padding: 1.2rem;
+        border-radius: 18px;
+    }
+
+    .input-group {
+        gap: 8px;
+    }
+
+    input {
+        width: 60px;
+        padding: 8px;
+    }
+
+    button {
+        width: 45px;
+        height: 45px;
+        padding: 10px;
+    }
+
+    button::before {
+        font-size: 1.5rem;
+    }
+
+    .result {
+        font-size: 2.5rem;
+    }
+
+    .result span {
+        font-size: 3.8rem;
     }
 }

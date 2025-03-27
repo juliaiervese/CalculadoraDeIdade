@@ -89,7 +89,7 @@ const CalculadoraIdade = () => {
             {erro && <p className="erro">{erro}</p>}
 <button onClick={calcularIdade}>Calcular</button>
 <div className="result">
-<p><span>{anos}</span> anos</p>
+<span>{anos}</span> anos
 <p><span>{meses}</span> meses</p>
 <p><span>{dias}</span> dias</p>
 </div>
