@@ -9,5 +9,5 @@ Este projeto é uma calculadora de idade feita com React seguindo o desafio prop
 2. Inicialize o terminal.
 3. Siga os passos a seguir: npm install -> npm start 
 
-#Aproveite sua calculadora!!
+# Aproveite sua calculadora!!
 
